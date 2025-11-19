@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TextInput from "../components/TextInput";
+import Tweet from '../components/Tweet';
 
 export default function Index() {
     const [text, setText] = useState('');
@@ -36,7 +37,7 @@ export default function Index() {
             <ul>
                 {tweetList.map(tweet => {
                     return (
-                        <li>{tweet}</li>
+                        <li><Tweet children={tweet}/></li>
                     )
                 })}
             </ul>
