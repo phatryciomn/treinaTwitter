@@ -7,7 +7,7 @@ export default function Index() {
 
     const {
         text,
-        onchange,
+        onTextChange,
         maxLength,
         sendTweet,
         tweetList

@@ -28,7 +28,7 @@ export function useIndex() {
 
     return {
         text,
-        onchange,
+        onTextChange,
         maxLength,
         sendTweet,
         tweetList
