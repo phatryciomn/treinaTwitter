@@ -1,33 +1,17 @@
-import { useState } from 'react';
 import TextInput from "../components/TextInput";
 import Tweet from '../components/Tweet';
 import styles from './Index.module.css';
+import { useIndex } from '../hooks/userIndex.page'
 
 export default function Index() {
-    const [text, setText] = useState('');
-    const maxLength = 120;
-    const [tweetList, setTweetList] = useState([]);
 
-    const tweet = {
-        date: new Date(),
-        text: text,
-        user: {
-            name: 'Phatrycio Miranda Nascimento',
-            userName: '@phatryciomn',
-            picture: 'https://github.com//phatryciomn.png'
-        }
-    }
-
-    function onTextChange(event) {
-    const text = event.target.value;
-    if (text.length <= maxLength) {
-        setText(text);
-        }
-    }
-
-    function sendTweet() {
-        setTweetList([...tweetList, tweet])
-    }
+    const {
+        text,
+        onchange,
+        maxLength,
+        sendTweet,
+        tweetList
+    } = useIndex();
 
     return (
         <div>
