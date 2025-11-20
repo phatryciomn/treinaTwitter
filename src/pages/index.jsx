@@ -9,7 +9,7 @@ export default function Index() {
     const [tweetList, setTweetList] = useState([]);
 
     const tweet = {
-        date: new Date().toDateString(),
+        date: new Date(),
         text: text,
         user: {
             name: 'Phatrycio Miranda Nascimento',

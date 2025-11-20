@@ -54,6 +54,7 @@
 
 .tweetListItem {
   padding: 16px 0;
+  list-style: none;
 }
 
 .tweetListItem:not(:last-child) {
